@@ -77,7 +77,7 @@ function updateLocation(position) {
 
 function watchAccel() {
 	var options = new Object();
-	options.frequency = 100;
+	options.frequency = 20;
 	accel_watch_id = navigator.accelerometer.watchAcceleration(updateAcceleration, function(ex){
 		navigator.accelerometer.clearWatch(accel_watch_id);
 		alert("accel fail (" + ex.name + ": " + ex.message + ")");
